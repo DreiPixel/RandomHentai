@@ -122,7 +122,7 @@ def format_tags(tags, excluded_tags, pages, language):
 
     for tag in full_tags:
         query_string = query_string + tag + " "
-    if language or language != None or language != "Dont Care":
+    if language and language != None and language != "Dont Care":
         query_string = query_string + " language:{}".format(language)
     if pages or pages != 0:
         query_string = query_string + " pages:<={}".format(pages)
